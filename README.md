@@ -6,6 +6,7 @@ This is an unofficial way for users to check their winstreaks on NetherGames.
 Contact me via Discord (at the bottom).
 ### 😎 Can I fork/steal the code?
 Hell yeah! Check out our [License.md](./License.md) for more information.
+
 ---
 [Join our Discord server](https://discord.gg/jjRkeAf4jh)
 - Support
