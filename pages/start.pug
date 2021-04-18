@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    link(rel="stylesheet", href="/assets/css/dist/start.css")
+    script(src="https://code.jquery.com/jquery-3.5.1.min.js")
+    script(src="/assets/js/start.js", defer)
+  body 
+    div.main.card
+      h2 👋 Hi there 
+      noscript
+        blockquote ❌ You must have JavaScript enabled to use this site!
+      .content
+        .old-content
+        .current-content
+          p Welcome to the unofficial NetherGames winstreak tracker, made by PiggyPlex.
+          blockquote If you encounter any bugs, please let him know (via Discord).
+      hr
+      button.next-btn
+        span.btn-emoji 🔥
+        | Let's go!

@@ -1,0 +1,53 @@
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: min(100vw - 20px, 600px);
+  max-height: calc(100vh - 20px);
+  overflow: auto;
+  box-shadow: 0 22px 25px 8px rgba(0, 0, 0, 0.25);
+}
+
+.content {
+  position: relative;
+}
+
+body {
+  background: #5760ff;
+  overflow: hidden;
+}
+body::before, body::after {
+  content: "";
+  position: fixed;
+  width: min(30vw, 300px);
+  height: min(30vw, 300px);
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(8deg);
+  z-index: -2;
+}
+body::before {
+  top: -124px;
+  left: -78px;
+}
+body::after {
+  background: rgba(0, 0, 0, 0.2);
+  bottom: -124px;
+  right: -78px;
+}
+
+.dababy {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: url("/assets/images/7534-dababy.png") center center no-repeat;
+  background-size: cover;
+  transition: 1s ease-out;
+  margin-top: 0px;
+  opacity: 1;
+}
+.dababy.animate {
+  display: block;
+  margin-top: -100px;
+}

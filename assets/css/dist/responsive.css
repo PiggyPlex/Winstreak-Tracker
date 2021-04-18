@@ -1,0 +1,109 @@
+.logo > i {
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  .players-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .cols {
+    display: block !important;
+  }
+}
+@media (max-width: 1000px) {
+  .players-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 840px) {
+  .players-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media (max-width: 780px) {
+  body {
+    font-size: 16px;
+  }
+
+  .page {
+    margin-left: 0;
+    padding-top: 5rem !important;
+  }
+  .page::before {
+    content: "";
+    background: #ececec;
+    position: absolute;
+    z-index: -300;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 320px;
+  }
+
+  .mobile-menu-btn {
+    visibility: visible !important;
+  }
+
+  .sidebar {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    transition: all 0.5s ease-out;
+  }
+  .sidebar.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .sidebar .logo {
+    transition: none;
+    filter: none !important;
+    font-size: 1.6rem !important;
+    align-items: center;
+    height: max-content;
+    opacity: 1 !important;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .sidebar .logo::before {
+    display: none;
+  }
+  .sidebar .logo > i {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+    opacity: 0.3;
+  }
+  .sidebar .sidebar-item, .sidebar .sidebar-item > a {
+    font-size: 1.2rem;
+  }
+  .sidebar::after {
+    display: none;
+  }
+  .sidebar .copyright {
+    font-size: 1rem !important;
+    padding-top: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+  .btn-group > button, .btn-group > .btn {
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
+.mobile-menu-btn {
+  visibility: hidden;
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  font-size: 2.4rem;
+  z-index: 300;
+}

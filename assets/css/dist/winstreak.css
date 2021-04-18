@@ -1,0 +1,7 @@
+.cols {
+  display: flex;
+  justify-content: space-between;
+}
+.cols > div {
+  flex-grow: 1;
+}

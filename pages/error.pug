@@ -1,0 +1,9 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head.pug
+    link(rel="stylesheet", href="/assets/css/dist/error.css")
+  body 
+    div
+      h1 Error #{error.code}
+      p #{error.message}

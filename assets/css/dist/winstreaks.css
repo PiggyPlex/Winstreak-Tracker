@@ -1,0 +1,53 @@
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+.players-grid > .card {
+  color: #383c40;
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 140px;
+  margin: 0;
+  transition: all 0.2s ease-out;
+}
+.players-grid > .card:hover {
+  transform: translateY(-10px);
+}
+.players-grid > .card:nth-of-type(5n-4) {
+  background: rgba(255, 153, 0, 0.25);
+  background: linear-gradient(180deg, rgba(255, 153, 0, 0.25) 0%, rgba(153, 92, 0, 0.25) 100%);
+}
+.players-grid > .card:nth-of-type(5n-4):hover {
+  box-shadow: 0 5px 28px 6px rgba(255, 153, 0, 0.15);
+}
+.players-grid > .card:nth-of-type(5n-3) {
+  background: rgba(157, 0, 255, 0.25);
+  background: linear-gradient(180deg, rgba(157, 0, 255, 0.25) 0%, rgba(94, 0, 153, 0.25) 100%);
+}
+.players-grid > .card:nth-of-type(5n-3):hover {
+  box-shadow: 0 5px 28px 6px rgba(157, 0, 255, 0.15);
+}
+.players-grid > .card:nth-of-type(5n-2) {
+  background: rgba(0, 255, 196, 0.25);
+  background: linear-gradient(180deg, rgba(0, 255, 196, 0.25) 0%, rgba(0, 153, 118, 0.25) 100%);
+}
+.players-grid > .card:nth-of-type(5n-2):hover {
+  box-shadow: 0 5px 28px 6px rgba(0, 255, 196, 0.15);
+}
+.players-grid > .card:nth-of-type(5n-1) {
+  background: rgba(51, 255, 0, 0.25);
+  background: linear-gradient(180deg, rgba(51, 255, 0, 0.25) 0%, rgba(31, 153, 0, 0.25) 100%);
+}
+.players-grid > .card:nth-of-type(5n-1):hover {
+  box-shadow: 0 5px 28px 6px rgba(51, 255, 0, 0.15);
+}
+.players-grid > .card:nth-of-type(5n) {
+  background: rgba(255, 0, 82, 0.25);
+  background: linear-gradient(180deg, rgba(255, 0, 82, 0.25) 0%, rgba(153, 0, 49, 0.25) 100%);
+}
+.players-grid > .card:nth-of-type(5n):hover {
+  box-shadow: 0 5px 28px 6px rgba(255, 0, 82, 0.15);
+}

@@ -1,0 +1,44 @@
+@use 'sass:color';
+@use './variables.scss';
+
+@mixin cardColor($color) {
+  background: $color;
+  background: linear-gradient(180deg, $color 0%, color.scale($color, $lightness: -40%) 100%);
+  &:hover {
+    box-shadow: 0 5px 28px 6px rgba($color, 0.15);
+  }
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  > .card {
+    color: variables.$text-color;
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 140px;
+    margin: 0;
+    transition: all 0.2s ease-out;
+    &:hover {
+      transform: translateY(-10px);
+    }
+    &:nth-of-type(5n-4) {
+      @include cardColor(rgb(255 153 0 / 25%));
+    }
+    &:nth-of-type(5n-3) {
+      @include cardColor(rgb(157 0 255 / 25%));
+    }
+    &:nth-of-type(5n-2) {
+      @include cardColor(rgb(0 255 196 / 25%));
+    }
+    &:nth-of-type(5n-1) {
+      @include cardColor(rgb(51 255 0 / 25%));
+    }
+    &:nth-of-type(5n) {
+      @include cardColor(rgb(255 0 82 / 25%));
+    }
+  }
+}
