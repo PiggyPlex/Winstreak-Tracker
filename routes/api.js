@@ -42,7 +42,7 @@ const winstreakChannels = {
   ctf: '832295841347272744'
 }
 
-router.all('/games', checkMethod('GET'), (req, res) => {
+router.all('/games', checkMethod(['GET']), (req, res) => {
   res.json({
     status: 'success',
     games: {
@@ -77,7 +77,7 @@ router.all('/track/:username', checkMethod(['POST']), async (req, res, next) => 
   const jwtPayload = { username: name, wins, losses, game };
   res.json({ status: 'success', token: jwt.sign(jwtPayload, process.env.JWT_SECRET), username: name, game });
 });
-
+// Register routes which require client; passed through using a function
 module.exports = (client) => {
   client.ready = false;
 
@@ -113,7 +113,7 @@ module.exports = (client) => {
     });
   });
 
-  router.all('/winstreaks/:token', checkMethod('GET'), ratelimit({
+  router.all('/winstreaks/:token', checkMethod(['GET']), ratelimit({
     windowMs: 5 * 60 * 1000,
     max: 1,
     handler: (req, res, next) => {
