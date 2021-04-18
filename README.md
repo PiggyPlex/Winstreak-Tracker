@@ -16,3 +16,5 @@ Hell yeah! Check out our [License.md](./License.md) for more information.
 Discord: `PiggyPlex#3888`
 Email: `piggyplex@gmail.com`
 Or from our [Discord server](https://discord.gg/jjRkeAf4jh)
+### 💻 Hosting
+[Cloud hosted on opeNode.io](https://openode.io)
